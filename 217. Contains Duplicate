@@ -1,0 +1,10 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        flag = False
+        nums.sort()    # sort array 
+        
+        for i in range(1,len(nums)):          # track on array to check if two numbers dublicated 
+            if nums[i-1] == nums[i]:
+                flag = True
+                
+        return flag
